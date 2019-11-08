@@ -1,0 +1,33 @@
+# ----------------------- QUERIES -----------------------
+query {
+  info
+}
+
+query {
+  feed {
+    id
+    description
+  }
+}
+
+# ----------------------- MUTATIONS -----------------------
+mutation {
+  post(url: "www.prsima.io", description: "This is prisma") {
+    id
+    description
+  }
+}
+
+# ----------------------- SUBSCRIPTIONS -----------------------
+subscription {
+  newLink {
+    id
+    url
+    description
+    postedBy {
+      id
+      name
+      email
+    }
+  }
+}
